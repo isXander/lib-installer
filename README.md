@@ -8,7 +8,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'uk.co.isXander:lib-installer:1.0'
+    // you will need to shadow/embed this dependency
+    implementation 'uk.co.isXander:lib-installer:-SNAPSHOT'
 }
 
 jar {
