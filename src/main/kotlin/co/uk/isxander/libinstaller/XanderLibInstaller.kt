@@ -65,7 +65,7 @@ object XanderLibInstaller {
             download(jar, metadata)
         }
 
-        InstallerUtils.
+        InstallerUtils.addToClasspath(jar)
 
         return 0
     }
