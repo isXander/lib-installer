@@ -59,7 +59,7 @@ object XanderLibInstaller {
         if (!metaExists || !metadata!!.has("installed_versions") || !InstallerUtils.jsonArrayContains(
                 metadata.optJSONArray(
                     "installed_versions"
-                ), DESIRED_VERSION
+                )!!, DESIRED_VERSION
             )
         ) {
             download(jar, metadata)
@@ -81,7 +81,7 @@ object XanderLibInstaller {
                 versionData = JsonHolder()
             }
 
-            val arr = versionData.optJSONArray("installed_versions")
+            val arr = versionData.optJSONArray("installed_versions")!!
             val versionPrim = JsonPrimitive(DESIRED_VERSION)
             if (!InstallerUtils.jsonArrayContains(arr, DESIRED_VERSION)) arr.add(versionPrim)
             versionData.put("version", versionPrim)
