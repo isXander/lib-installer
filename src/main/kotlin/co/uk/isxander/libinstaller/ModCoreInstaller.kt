@@ -15,7 +15,7 @@ import java.net.URL
 import java.util.Set
 import javax.swing.*
 
-internal object ModCoreInstaller {
+object ModCoreInstaller {
 
     private const val VERSION_URL: String = "https://api.sk1er.club/modcore_versions"
     private const val CLASS_NAME: String = "club.sk1er.mods.core.ModCore"
