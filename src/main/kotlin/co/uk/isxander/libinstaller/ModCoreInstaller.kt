@@ -83,12 +83,12 @@ object ModCoreInstaller {
         }
 
         val jsonHolder = InstallerUtils.fetchJSON(VERSION_URL)
-        var latestRemote = jsonHolder.optString("1.8.9")
-        val failed = jsonHolder.getKeys().isEmpty() || !jsonHolder.optBoolean("success")
+        var latestRemote = jsonHolder.optString("1.8.9")!!
+        val failed = jsonHolder.getKeys().isEmpty() || !jsonHolder.optBoolean("success")!!
 
         val metadataFile = File(dataDir, "metadata.json")
         val localMetadata = InstallerUtils.readFile(metadataFile)
-        if (failed) latestRemote = localMetadata.optString("1.8.9")
+        if (failed) latestRemote = localMetadata.optString("1.8.9")!!
         val modCoreFile = File(dataDir, "Sk1er Modcore-${latestRemote} (1.8.9).jar")
 
         if (!modCoreFile.exists() || !localMetadata.optString("1.8.9").equals(latestRemote, ignoreCase = true) && !failed) {
