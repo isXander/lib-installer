@@ -11,7 +11,7 @@ import java.nio.charset.Charset
 import java.util.Set
 
 
-internal object XanderLibInstaller {
+object XanderLibInstaller {
 
     private const val DESIRED_VERSION = "1.0"
     private const val CLASS_NAME = "co.uk.isxander.xanderlib.XanderLib"
