@@ -12,7 +12,7 @@ import java.net.URL
 import javax.swing.*
 
 
-internal object InstallerUtils {
+object InstallerUtils {
 
     fun readFile(file: File): JsonHolder {
         return try { JsonHolder(FileUtils.readFileToString(file)) }
