@@ -163,7 +163,7 @@ object InstallerUtils {
 
 }
 
-internal class JsonHolder(private var obj: JsonObject) {
+class JsonHolder(private var obj: JsonObject) {
 
     constructor(raw: String?) : this(JsonObject()) {
         if (raw != null) {
