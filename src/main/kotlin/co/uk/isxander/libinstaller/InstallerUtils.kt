@@ -201,12 +201,12 @@ class JsonHolder(private var obj: JsonObject) {
         catch (e: Exception) { default }
     }
 
-    fun optString(key: String, default: String = ""): String? {
+    fun optString(key: String, default: String? = ""): String? {
         return try { obj.get(key).asString }
         catch (e: Exception) { default }
     }
 
-    fun optJSONArray(key: String, default: JsonArray = JsonArray()): JsonArray? {
+    fun optJSONArray(key: String, default: JsonArray? = JsonArray()): JsonArray? {
         return try { obj.get(key).asJsonArray }
         catch (e: Exception) { default }
     }
