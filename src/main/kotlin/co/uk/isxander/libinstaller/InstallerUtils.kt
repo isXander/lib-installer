@@ -196,17 +196,17 @@ class JsonHolder(private var obj: JsonObject) {
         return this
     }
 
-    fun optBoolean(key: String, default: Boolean = false): Boolean {
+    fun optBoolean(key: String, default: Boolean = false): Boolean? {
         return try { obj.get(key).asBoolean }
         catch (e: Exception) { default }
     }
 
-    fun optString(key: String, default: String = ""): String {
+    fun optString(key: String, default: String = ""): String? {
         return try { obj.get(key).asString }
         catch (e: Exception) { default }
     }
 
-    fun optJSONArray(key: String, default: JsonArray = JsonArray()): JsonArray {
+    fun optJSONArray(key: String, default: JsonArray = JsonArray()): JsonArray? {
         return try { obj.get(key).asJsonArray }
         catch (e: Exception) { default }
     }
