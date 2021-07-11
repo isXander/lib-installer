@@ -40,7 +40,7 @@ object InstallerUtils {
             connection.connectTimeout = 15000
             connection.doOutput = false
             instream = connection.inputStream
-            return IOUtils.toString(is, Charset.defaultCharset())
+            return IOUtils.toString(instream, Charset.defaultCharset())
         } catch (e: Exception) {
             e.printStackTrace()
         } finally {
