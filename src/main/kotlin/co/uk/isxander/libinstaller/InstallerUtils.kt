@@ -2,6 +2,7 @@ package co.uk.isxander.libinstaller
 
 import com.google.gson.*
 import org.apache.commons.io.FileUtils
+import org.apache.commons.io.IOUtils
 import java.awt.Font
 import java.io.File
 import java.io.FileOutputStream
@@ -39,6 +40,7 @@ object InstallerUtils {
             connection.connectTimeout = 15000
             connection.doOutput = false
             instream = connection.inputStream
+            return IOUtils.toString(is, Charset.defaultCharset())
         } catch (e: Exception) {
             e.printStackTrace()
         } finally {
