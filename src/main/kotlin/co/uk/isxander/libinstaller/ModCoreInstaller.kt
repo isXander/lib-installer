@@ -84,7 +84,7 @@ object ModCoreInstaller {
 
         val jsonHolder = InstallerUtils.fetchJSON(VERSION_URL)
         var latestRemote = jsonHolder.optString("1.8.9")!!
-        val failed = jsonHolder.getKeys().isEmpty() || !jsonHolder.optBoolean("success")!!
+        val failed = jsonHolder.getKeys().isEmpty() || !jsonHolder.optBoolean("success", true)!!
 
         val metadataFile = File(dataDir, "metadata.json")
         val localMetadata = InstallerUtils.readFile(metadataFile)
